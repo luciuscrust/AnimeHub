@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/logo.jpeg">
+
+</head>
+<body>
+  <header class="bg-primary text-white p-4 d-flex align-items-center">
+    <img id="logo" src="images/logo.jpeg" alt="logo" class="me-3" style="max-width: 50px; height: auto;">
+    <div>
+      <h1 class="mb-0">AnimeHub</h1>
+      <p class="lead">Your gateway to anime excitement!</p>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <section class="mb-5">
+      <h2 class="text-decoration-underline">Discover AnimeHub</h2>
+      <p>
+        Dive into the ultimate anime experience with AnimeHub. Whether you're into limited edition manga, collectibles,
+        or exclusive event gear, our offerings connect fans across Guyana and beyond.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-decoration-underline">Available Packages</h2>
+      <table class="table table-bordered">
+        <thead class="table-primary">
+          <tr>
+            <th>Package</th>
+            <th>Description</th>
+            <th>Price (GYD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Anniversary Comic Book</td><td>Exclusive collector's item</td><td>400</td></tr>
+          <tr><td>Comic Book Bundle</td><td>Multi-book combo</td><td>800</td></tr>
+          <tr><td>Anniversary Anime Package</td><td>Japanese releases</td><td>1500</td></tr>
+          <tr><td>Deluxe Edition</td><td>Rare print selections</td><td>3000</td></tr>
+          <tr><td>Mystery Surprise</td><td>Books + T-shirt</td><td>1000</td></tr>
+        </tbody>
+      </table>
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#orderModal">Place Order</button>
+    </section>
+
+    <section id="info" class="my-5">
+      <h2 class="text-decoration-underline">Corporation of Anime Hub</h2>
+      <p>
+        AnimeHub GY is an anime merchandise store based in Guyana, 
+        offering a variety of anime-related products. 
+        They have locations in Georgetown and Giftland Mall, 
+        and they are known for their vibrant pop-up events like those at Monster Mash.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-decoration-underline">Store Locations</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-3">
+        <div class="col">
+          <div class="d-flex justify-content-between border p-3 bg-light">
+            <span>Lot 50, Section I, Sheriff Street</span>
+            <span>8:00am - 5:00pm</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-between border p-3 bg-light">
+            <span>Giftland Mall</span>
+            <span>9:00am - 10:00pm</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-between border p-3 bg-light">
+            <span>Amazonia Mall</span>
+            <span>9:00am - 10:00pm</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-between border p-3 bg-light">
+            <span>Movietowne Mall</span>
+            <span>9:00am - 10:00pm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <h4>Contact AnimeHub</h4>
+    <p>
+      Call: +592 674-5403 <br>
+      Email: animehub.gy@gmail.com <br>
+      Socials: @AnimeHub GY
+    </p>
+  </footer>
+
+  <!-- Order Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderModalLabel">Order Package</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="orderForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="location" class="form-label">Delivery Region</label>
+              <select class="form-select" id="location" name="location">
+                <option value="north-america">North America - 150 GYD</option>
+                <option value="europe">Europe - 200 GYD</option>
+                <option value="asia">Asia - 100 GYD</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="package" class="form-label">Select Package</label>
+              <select class="form-select" id="package" name="package">
+                <option value="anniversary-commic">Anniversary Comic Book</option>
+                <option value="commic">Comic Book Bundle</option>
+                <option value="anniversary-anime">Anniversary Anime Package</option>
+                <option value="deluxe">Deluxe Edition</option>
+                <option value="mystery">Mystery Surprise</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <p id="totalPrice" class="mt-2"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
